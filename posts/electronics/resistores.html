@@ -30,39 +30,78 @@
     <title>Faura Notes</title>
 </head>
 
-<body class="black">
+<body class="white black-text">
     <div class="container">
-        <div class="container white-text">
+        <div class="container readingFont">
             <div>
                 <h1 class="center titles">RESISTORES</h1>               
 
-                <p>Existem diferentes componentes eletricos usados na eletronica, talvez o componente mais comum se chama resistor.</p>
+                <p>Existem diferentes componentes elétricos usados na eletrônica, talvez o componente mais comum se chama resistor.</p>
 
-                <p>Resistores transformam energia eletrica em energia termica, assim, diminuindo a tensão em alguma parte do circuito, eles são fundamentais pois impedem componentes de queimarem por exemplo por causa da alta tensão.</p>
+                <p>Resistores transformam energia elétrica em energia térmica, assim, diminuindo a tensão em alguma parte do circuito, eles são fundamentais pois impedem componentes de queimarem por exemplo por causa da alta tensão.</p>
 
                 <p>Físicamente resistores podem ser medidos atravez da Lei de Ohm:</p>
-                <p>\[V = RI \]</p>
+                <p>\[V = RI \Rightarrow R = \frac{V}{R} \text{ } \left[ \frac{V}{\Omega} \right] \]</p>
                 
                 <p>Em um componente real existem algumas linhas coloridas pintadas na sua superficie da ceramica, essas linhas são uma forma de indentificar sua resistência de forma padronizada sem a necessidade de medir em um multimetro toda hora, sendo a combinação das cores, um código para um valor de resistencia. Você pode usar uma <a href="https://www.allaboutcircuits.com/tools/resistor-color-code-calculator/">calculadora online</a> como esta para verificar.</p>
+                
+                <figure>
+                    <img src="../../media/images/electronics/resistors.jpg" class="center responsive-img" alt="6 resistores diferentes"/>
+                    <figcaption class="center"><i>Figura 1. "Seis resistores". Wikimedia.</i></figcaption>
+                </figure>
+
+                <p>Eletronicamente eles são representados pelas seguintes notações:</p>
                 <div class="container">
                     <div class="container">
-                        <img src="../../media/images/electronics/resistors.jpg" class="center responsive-img" alt="6 resistores diferentes"/>
+                        <img src="../../media/images/electronics/resistorUSNotation.svg" class="center responsive-img" alt="Notação estadunidense de resistores"/>
+                        <img src="../../media/images/electronics/resistorIECNotation.svg" class="center responsive-img" alt="Notação IEC de resistores"/>
                     </div>                    
                 </div>
-
-                <p>Eletronicamente eles são representados pela seguinte notação</p>
-                <p>NOTAÇÕES ELETRONICAS</p>
+                
+                <p>Ambas as notações significam a mesma coisa, neste caso, ambas podem ser interpretadas como um resistor de \( 5 \text{ } k\Omega \). Sendo uma das notações o padrão estadunidense e a outra o padrão IEC respectivamente.</p>
 
                 <p>Existem outros tipos de resistores, como por exemplo os resistores variaveis, tal como os potenciometros, mas isso será discutido separadamente futuramente.</p>
 
-                <p>Multiplos resistores tambem podem ser combinados eletronicamente formando associações em serie ou paralelo. Por exemplo:</p>
-                <p>ASSOCIAÇÕES</p>
+                <p>Multiplos resistores tambem podem ser combinados eletronicamente formando associações em série ou paralelo. Por exemplo:</p>
+                <table>
+                    <tr>
+                        <th class="center">Resistência em Série</th>
+                        <th class="center">Resistência em Paralelo</th>
+                    </tr>
 
-                <p>A resistencia total pode ser obtida atraves da Resistencia Equivalente, tal como a seguir:</p>
-                <p>\[R_eq = R_1 + R_2 + R_n \]</p>
-                <p>\[ \frac{1}{R_eq} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_n} \]</p>
+                    <tr>
+                        <th class="center"><img src="../../media/images/electronics/serialResistors.svg" class="center responsive-img" alt="Resistores em série"/></th>
+                        <th class="center"><img src="../../media/images/electronics/parallelResistors.svg" class="center responsive-img" alt="Resistores em paralelo"/></th>
+                    </tr>
+                </table>
 
+                <br><br>
+                <p>A resistência total pode ser obtida através da Resistência Equivalente, tal como a seguir:</p>
+                <table>
+                    <tr>
+                        <th class="center">Resistência Equivalente para Resistência em Série</th>
+                        <th class="center">Resistência Equivalente para Resistência em Paralelo</th>
+                    </tr>
+
+                    <tr>
+                        <th><p>\[R_{eq} = R_1 + R_2 + R_n \]</p></th>
+                        <th><p>\[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_n} \]</p></th>
+                    </tr>
+                </table>
+
+                <br><br>
                 <p>Por fim, para que um resistor seja ligado em uma protoboard real, basta que ele receba uma fonte de tensão, alguns componentes possuem o que é chamado de polaridade, mas isto será discutido posteriormente...</p>
+
+                <figure>
+                    <img src="../../media/images/electronics/resistorBreadboard.png" class="center responsive-img" alt="Resistor em Protoboard"/>
+                    <figcaption class="center"><i>Figura 2. "Resistor em Protoboard". Tinkercad.</i></figcaption>
+                </figure>
+
+                <br>
+                <h4 class="titles">REFERÊNCIAS</h4>
+                <div>
+                    <p>[1] Forrest M. Mims III. Getting Started With Electronics.</p>
+                </div>
             </div>
         </div>
     </div>

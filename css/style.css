@@ -3,6 +3,14 @@
     color: #4d5d91;
 }
 
+.readingFont {
+    font-family: sans-serif;
+}
+
+.pageBackground {
+    background-color: #4d5d91;
+}
+
 .underline {
     text-decoration: underline;
 }
