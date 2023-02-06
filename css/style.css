@@ -4,13 +4,16 @@
 }
 
 .readingFont {
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica 25 UltraLight', sans-serif;
+    font-family: 'Helvetica 35 Thin', sans-serif;
+    font-family: 'Helvetica 45 Light', sans-serif;
+    font-family: 'Helvetica 55 Roman', sans-serif;
+    font-family: 'Helvetica 65 Medium', sans-serif;
 }
 
-.pageBackground {
-    background-color: #4d5d91;
-}
+.pageBackground {background-color: black;}
 
-.underline {
-    text-decoration: underline;
-}
+.underline {text-decoration: underline;}
+
+a {color: #2438ab;}
