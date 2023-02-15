@@ -17,3 +17,7 @@
 .underline {text-decoration: underline;}
 
 a {color: #2438ab;}
+
+strong {
+    font-weight: bold;
+}
