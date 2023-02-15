@@ -48,7 +48,8 @@
 
             <p>Na computação, quando um número é gerado matematicamente de maneira determinística é chamado de <em>&quot;número pseudo-aleatório&quot;</em> ou apenas <em>PRNG</em>. <strong>Isso não é seguro</strong> porque o <em>PRNG</em> <strong>não é verdadeiramente aleatório</strong>, pois é completamente determinado por um valor inicial, chamado de <em>&quot;seed&quot;</em> (semente) do <em>PRNG</em>.</p>
 
-            <p><em>John von Neumann</em> disse uma vez: <em>&quot;Qualquer um que considere métodos aritméticos de produzir dígitos aleatórios está, é claro, em estado de pecado.&quot;</em></p>
+            <p><em>John von Neumann</em> disse uma vez: </p>
+            <blockquote><i>&quot;Qualquer um que considere métodos aritméticos de produzir dígitos aleatórios está, é claro, em estado de pecado.&quot;<br>–John von Neumann</i></blockquote>
 
             <p>As aplicações criptográficas exigem que a saída <strong>não seja previsível a partir de saídas anteriores.</strong> Com isso dito, surge a necessidade de um gerador de <strong>números verdadeiramente aleatórios</strong> ou um <em>RNG</em>. A linguagem Go possui a biblioteca <em>crypto/rand</em> para isso, ela chama de forma inteligente funções <strong>diretamente do sistema operacional para lidar com a aleatoriedade</strong> (no <em>Linux, FreeBSD, Dragonfly</em> e <em>Solaris</em> usa-se <em>getrandom(2)</em> se disponível, <em>/dev/urandom</em> caso contrário. No <em>OpenBSD</em> e <em>macOS</em> usa-se <em>getentropy(2)</em>. Em outros sistemas semelhantes ao <em>Unix</em>, usa-se <em>/dev/urandom</em>. Em sistemas <em>Windows</em>, usa-se a API <em>RtlGenRandom</em>. No <em>Wasm</em>, usa-se a <em>Web Crypto API</em>.)</p>
         </div>
