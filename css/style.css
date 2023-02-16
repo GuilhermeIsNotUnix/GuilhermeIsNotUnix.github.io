@@ -3,6 +3,11 @@
     color: #4d5d91;
 }
 
+.darkPageTitle {
+    font-family: 'TimeWarner', sans-serif;
+    color: #ccffcc;
+}
+
 .readingFont {
     font-family: 'Helvetica Neue', sans-serif;
     font-family: 'Helvetica 25 UltraLight', sans-serif;
