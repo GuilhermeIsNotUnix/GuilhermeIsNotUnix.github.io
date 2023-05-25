@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Circuit Diagram, cdlibrary.dll 4.0.0.0 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="220" height="180" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        rect, circle, ellipse, line, polyline, polygon, path {
+            fill: black;
+            stroke: black;
+        }
+        text {
+            fill: black;
+        }
+        @media (prefers-color-scheme: dark) {
+            rect, circle, ellipse, line, polyline, polygon, path {
+                fill: white;
+                stroke: white;
+            }
+            text {
+                fill: white;
+            }
+        }
+    </style>
+            
+	<line x1="20" y1="140" x2="180" y2="140" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="20" y1="40" x2="180" y2="40" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="180" y1="110" x2="180" y2="140" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="180" y1="60" x2="180" y2="65" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="180" y1="105" x2="180" y2="110" style="stroke-linecap:square;stroke-width:2" />
+	<path d="M 180,65 L 180,67 L 173,70 L 187,76 L 173,82 L 187,88 L 173,94 L 187,100 L 180,103 L 180,105" style="fill-opacity:0;stroke-linecap:square;stroke-width:2" />
+	<text x="166" y="85" style="font-family:Arial;font-size:11px;text-anchor:end" dominant-baseline="middle" transform="rotate(0, 166, 85)">4.7 kΩ</text>
+	<line x1="180" y1="40" x2="180" y2="60" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="120" y1="110" x2="120" y2="140" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="120" y1="60" x2="120" y2="65" style="stroke-linecap:square;stroke-width:2" />
+	<line x1="120" y1="105" x2="120" y2="110" style="stroke-linecap:square;stroke-width:2" />
+	<path d="M 120,65 L 120,67 L 113,70 L 127,76 L 113,82 L 127,88 L 113,94 L 127,100 L 120,103 L 120,105" style="fill-opacity:0;stroke-linecap:square;stroke-width:2" />
+	<text x="106" y="85" style="font-family:Arial;font-size:11px;text-anchor:end" dominant-baseline="middle" transform="rotate(0, 106, 85)">4.7 kΩ</text>
+	<line x1="120" y1="40" x2="120" y2="60" style="stroke-linecap:square;stroke-width:2" />
+	<ellipse cx="120" cy="140" rx="2" ry="2" style="fill-opacity:1;stroke-width:2" />
+	<ellipse cx="120" cy="40" rx="2" ry="2" style="fill-opacity:1;stroke-width:2" />
+</svg>
