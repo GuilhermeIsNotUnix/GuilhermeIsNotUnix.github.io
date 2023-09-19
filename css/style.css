@@ -6,6 +6,7 @@
 .darkPageTitle {
     font-family: 'TimeWarner', sans-serif;
     color: #ccffcc;
+    font-size: 3.75rem;
 }
 
 .readingFont {
@@ -25,4 +26,8 @@ a {color: #ccffcc;}
 
 strong {
     font-weight: bold;
+}
+
+p {
+    font-size: 1.5rem;
 }
