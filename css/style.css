@@ -31,3 +31,13 @@ strong {
 p {
     font-size: 1.5rem;
 }
+
+.subtitle-text {
+    font-size: 1.125rem;
+}
+
+.circular-image {
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    border-radius: 50%; /* Isso cria uma forma circular */
+}
