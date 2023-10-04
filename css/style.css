@@ -22,22 +22,14 @@
 
 .underline {text-decoration: underline;}
 
-a {color: #ccffcc;}
+a {color: #c5fffd;}
 
-strong {
-    font-weight: bold;
-}
+strong {font-weight: bold;}
 
-p {
-    font-size: 1.5rem;
-}
-
-.subtitle-text {
-    font-size: 1.125rem;
-}
+.subtitle-text {font-size: 1.125rem;}
 
 .circular-image {
-    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    border-radius: 50%; /* Isso cria uma forma circular */
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
 }
