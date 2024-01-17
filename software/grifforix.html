@@ -33,16 +33,21 @@
         <div class="container">
             <h3 class="center darkPageTitle">GRIFFORIX</h3>
 
-            <p><em>grifforix</em> visa ser um gerador de senhas fortes e seguras feito na linguagem Go por <em>Guilherme Faura</em>, ele usa o pacote crypto/rand do Go com BCrypt. Há planos de torná-lo também um software autenticador seguro no futuro. <em>grifforix</em> é atualmente <strong>experimental</strong>. <em>grifforix</em> está sob a licença Apache 2.0, <strong>leia-a com atenção</strong>.</p>
+            <figure class="center">
+                <img src="../media/images/software/grifforix.png" width=60% height=60% alt="The grifforix, Marcos Paulo Soares"/>
+                <figcaption class="center"><i>The grifforix, Marcos Paulo Soares</i></figcaption>
+            </figure>
+
+            <p><em>grifforix</em> visa ser um gerador de senhas fortes e seguras feito na linguagem Go por <em>Guilherme Faura</em>. Há planos de torná-lo também um software autenticador seguro. <em>grifforix</em> é atualmente <strong>experimental</strong>. <em>grifforix</em> está sob a licença Apache 2.0, <strong>leia-a com atenção</strong>.</p>
 
             <div class="center">
-                <a target="_blank" href="https://github.com/GuilhermeIsNotUnix/grifforix/releases/download/v0.5.0-alpha/grifforix-windows-v0.5.0.exe" class="waves-effect waves-light btn-large yellow lighten-3 black-text"><i class="material-icons left">file_download</i>Download</a>
+                <a target="_blank" href="https://github.com/GuilhermeIsNotUnix/grifforix/releases/download/v0.5.0-alpha/grifforix-windows-v0.5.0.exe" class="waves-effect waves-light btn-large yellow lighten-3 black-text"><i class="material-icons left">file_download</i>Windows Download</a>
             </div>
 
             <br>
             <h4 class="center darkPageTitle">COMO FUNCIONA?</h4>
 
-            <p>Bem, primeiro, ele não usa métodos comuns para geração de números aleatórios, tal como o método mais simples <em>math/rand</em> do Go (equivalente a <em>rand()</em> na linguagem de programação C, que é uma função pseudo-randomica), mas na verdade usa o <em>crypto/rand</em> do Go que gera um número aleatório criptograficamente seguro.</p>
+            <p>Bem, primeiro, ele não usa métodos comuns para geração de números aleatórios, tal como o método mais simples <em>math/rand</em> do Go (equivalente a <em>rand()</em> na linguagem de programação C), mas na verdade usa o <em>crypto/rand</em> do Go que gera um número aleatório criptograficamente seguro.</p>
 
             <p>Na computação, quando um número é gerado matematicamente de maneira determinística é chamado de <em>&quot;número pseudo-aleatório&quot;</em> ou apenas <em>PRNG</em>. <strong>Isso não é seguro</strong> porque o <em>PRNG</em> <strong>não é verdadeiramente aleatório</strong>, pois é completamente determinado por um valor inicial, chamado de <em>&quot;seed&quot;</em> (semente) do <em>PRNG</em>.</p>
 
