@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Import TimeWarner font-->
+    <link href="https://fonts.cdnfonts.com/css/timewarner" rel="stylesheet">
+    <!--Import Helvetica Neue font-->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- EB Garamond font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
+    <!--Import compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Meta tags og adicionais -->
+    <meta property="og:title" content="O que fazer depois de instalar Ubuntu 22.04 LTS: Os primeiros passos no mundo Linux">
+    <meta property="og:description" 
+        content="Você acabou de instalar seu novo sistema operacional Ubuntu 22.04 LTS e ligou sua máquina... E agora? O que fazer? O que tenho que saber? Neste artigo ensinarei o que você deve fazer assim que instalar seu novo Ubuntu 22.04 LTS na sua máquina para ter uma melhor experiência, ensinarei o uso do Terminal BASH e também deixarei umas sugestões.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://guilhermeisnotunix.github.io/posts/computers/oquefazerdepoisdeinstalaroubuntu.html">
+
+    <!-- Meta tags og para imagem de capa -->
+    <meta property="og:image" content="https://guilhermeisnotunix.github.io/media/images/computers/ubuntu.jpeg">
+    <meta property="og:image:secure_url" content="https://guilhermeisnotunix.github.io/media/images/computers/ubuntu.jpeg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Ubuntu Wallpaper">
+
+    <title>O que fazer depois de instalar Ubuntu 22.04 LTS: Os primeiros passos no mundo Linux</title>
+</head>
+
+<body class="black readingFont white-text">
+    <div class="container">
+        <div class="row">
+            <div class="s12 m6 flow-text">
+                <a class="btn-floating btn-large waves-effect waves-light white" href="../../index.html"><i class="material-icons black-text">arrow_back</i></a>
+                <h3 class="left darkPageTitle">O QUE FAZER DEPOIS DE INSTALAR UBUNTU 22.04 LTS: OS PRIMEIROS PASSOS NO MUNDO LINUX</h3>
+                <p class="white-text subtitle-text"><i>~8 min. de leitura</i></p>
+                
+                <p class="grey-text subtitle-text">Você acabou de instalar seu novo sistema operacional Ubuntu 22.04 LTS e ligou sua máquina... E agora? O que fazer? O que tenho que saber? Neste artigo ensinarei o que você deve fazer assim que instalar seu novo Ubuntu 22.04 LTS na sua máquina para ter uma melhor experiência, ensinarei o uso do Terminal BASH e também deixarei umas sugestões.</p>
+                
+                <br>
+                <div class="divider"></div>
+                
+                <p>O mundo Linux as vezes pode ser um desafio, ou vamos dizer melhor: uma visão diferente da experiência de usar um sistema operacional em si, quando comparada ao Windows, e, isso pode assustar algumas pessoas, até elas entenderem como as coisas funcionam... </p>
+                
+                <p>Bom, a primeira coisa que devemos fazer é nos conectarmos na internet e atualizarmos o sistema operacional. Para isso, existe a forma visual e a forma via linha de comando. Ambas as opções resultam na mesma coisa, o que pode ser somente uma questão de um meio para se chegar em um resultado, uma questão de conforto. Mas, eu sempre influencio as pessoas a se tornarem <em>Power Users</em> — usuários mais avançados com conhecimentos técnicos que dominam as ferramentas que utilizam, há muitas vantagens e, por isso, vou dar foco neste artigo ao jeito tradicional da linha de comando. Não tenha medo, vou explicar tudo.</p>
+                
+                <p>As distribuições Linux são sistemas operacionais baseados em um famoso sistema operacional precursor da década de 70 chamado de UNIX, um ancestral em comum da própria gigante Apple, na qual tem seu sistema operacional, o MacOS, também baseado no UNIX. Era uma época onde janelas e botões nem existiam, então o sistema operacional UNIX funcionava com programas textuais que se comunicavam perfeitamente entre si, ele foi pensado e construído dessa forma, para ser poderoso, em termos de integração e controle entre seus processos e essa herança prosseguiu também nos sistemas baseados que temos hoje. Isso pode ser muito poderoso até os dias de hoje.</p>
+                
+                <p>Então abra seu Terminal e vamos atualizar o sistema operacional com comandos. (Eu sugiro para que espere eu explicar primeiro e você faça só depois. É uma prática ruim colar comandos da Internet sem saber o que eles fazem... E essa já é a primeira dica que eu poderia te dar para se tornar um Power User).</p>
+                
+                <blockquote><i><em>$ sudo apt update &amp;&amp; sudo apt upgrade</em></i></blockquote>
+                
+                <p>Vamos explicar parte por parte do comando. O símbolo de $ não faz parte do comando em si e não precisa ser copiado, ele simboliza (no Shell padrão BASH) que o Terminal está pronto para receber comandos a serem executados.</p>
+                
+                <p>A seguir a primeira palavra &quot;sudo&quot; você deve notar que se repete duas vezes. Sudo significa &quot;Super User do&quot; (&quot;Usuário poderoso faça&quot;) é um comando para dar permissões ao que vier a seguir. E garanto que você já viu isso antes, é similarmente ao que você faz no Windows quando vai instalar um programa novo e uma janela aparece para você, com um efeito sonoro, pedindo para você clicar em &quot;Sim&quot; ou &quot;Não&quot; para permitir a execução de um programa. No entanto sudo é uma forma digamos que mais segura e poderosa deste mesmo processo de segurança... No MacOS também há a existência do próprio sudo, já que como mencionado anteriormente ambos os sistemas possuem um ancestral em comum (UNIX).</p>
+                
+                <p>Outra palavra que se repete é &quot;apt&quot;. Esta se refere ao gerenciador de pacotes do sistema Ubuntu — que se baseou em outro sistema chamado Debian. O gerenciador de pacotes é o que, como o nome diz, gerencia os programas do seu sistema operacional (chamado neste contexto de pacotes), todo processo de instalar ou desinstalar um programa, cuidar de atualizar drivers do sistema... São todas funções do gerenciador de pacotes, neste caso chamado de apt (existem outros), que significa Advanced Packaging Tool (Ferramenta Avançada de Empacotamento). Então &quot;sudo apt&quot; significa que você está dando permissões e chamando o gerenciador de pacotes para fazer algum processo a seguir — que pode ser qualquer uma das funções que mencionei anteriormente.</p>
+                
+                <p>Agora sim saímos de um pouco da repetição e caímos em uma palavra nova &quot;update&quot;... Do inglês se traduz para &quot;atualizar&quot; e é sobre isso resumidamente. &quot;sudo apt update&quot; irá dar permissões de segurança, chamar o gerenciador de pacotes apt e fazer a função de atualizar (update). Mas detalhe que &quot;atualizar&quot; pode não ser o processo completo que você está imaginando. Falando tecnicamente &quot;atualizar&quot;, neste contexto, significa que o comando até aqui irá se comunicar com os servidores onde ficam armazenados os pacotes e verificar suas versões para saber se o seu sistema está desatualizado ou não comparando-as e <em>somente isso</em>. Ele ainda não instalará nada, mesmo que esteja realmente desatualizado, é somente o sentido de verificar um status e te informar &quot;olha, verifiquei aqui e temos 7 programas desatualizados que podem ser atualizados&quot;, por exemplo...</p>
+                
+                <p>A seguir existe dois caracteres que são repetidos novamente: &quot;&amp;&amp;&quot; se trata de um operador lógico, que vem lá da álgebra booleana e as infames tabelas verdades, mas eu sei que está muito cedo na manhã para falar de forma técnica de toda álgebra booleana e suas operações, falarei isso em outro artigo, então vamos direto ao ponto... &quot;&amp;&amp;&quot; simboliza uma operação lógica AND, onde a primeira expressão &quot;sudo apt update&quot; será comparada com o que vier a seguir do &quot;&amp;&amp;&quot;, resultando em &quot;verdadeiro&quot; somente se ambas as expressões forem verdadeiras. Em outras palavras, esses dois caracteres servem como uma forma que você pode fazer uma sequência de comandos, que quando disposto dessa forma, a segunda expressão de comandos só será executada se a primeira expressão for executada corretamente. Ou seja, se o primeiro comando (sudo apt update) falhar por alguma razão, tudo que vier a seguir não será mais executado. É uma forma comum de se fazer sequências de comandos em um terminal GNU/Linux padrão garantindo que tudo seja executado. </p>
+                
+                <p>Agora que você sabe da existência dessa forma de sequenciamento que garante a execução dos programas, queria mencionar que isso é só uma gota do poder do Linux e só com isso você já pode imaginar como podem ser feitas as automatizações de máquinas, que ficam fazendo suas tarefas enquanto eu e você tomamos um café.</p>
+                
+                <p>Pois bem, assim que o primeiro comando executar corretamente e atualizar, agora vamos para segunda expressão: &quot;sudo apt upgrade&quot; significa o processo de atualização que você realmente imagina ao pensar na palavra &quot;atualizar&quot;. Anteriormente verificamos se havia atualizações e agora de fato vamos instalar os pacotes que foram classificados como desatualizados. Desta vez, este comando é um pouco mais interativo e te mostrará uma lista de nomes de programas que serão atualizados e pedirá uma confirmação sua para a instalação dos mesmos. Você só precisa apertar &quot;y&quot; de &quot;yes&quot; (sim em inglês) e ENTER e pronto, o gerenciador de pacotes começará a fazer seu trabalho de instalar as atualizações na sua máquina.</p>
+                
+                <p>Em teoria, você já tem seu sistema operacional pronto para ser utilizado, já que já está devidamente atualizado e seguro, mas podemos melhorar nossa experiência instalando algumas coisas convenientes. E irei aproveitar para te ensinar como instalar programas via comandos também, já que até agora só atualizamos o sistema.</p>
+                
+                <p>Por padrão o Ubuntu devido a leis de patentes não trás consigo alguns Codecs de multimídia tais como .mp3, H.264 ou fontes da Microsoft... Mas isso não é problema, já que é possível instalar todos eles com um único comando:</p>
+                
+                <blockquote><i><em>$ sudo apt install ubuntu-restricted-extras</em></i></blockquote>
+                
+                <p>Você deve ter notado a palavra nova agora &quot;install&quot;, e é essa palavra que devemos acrescentar para usar a função de instalar um pacote com o apt seguido do nome do pacote que queremos instalar.</p>
+                
+                <p>(Observação: Durante a instalação do &quot;ubuntu-restricted-extras&quot; pode ser necessário aceitar licenças dentro do próprio Terminal e talvez para você que não tenha o costume em interfaces de Terminais, para fazer a movimentação entre as opções você pode usar os direcionais ou a tecla TAB e confirmar alguma opção com a tecla ENTER.)</p>
+                
+                <p>Além disso, o Ubuntu por padrão vem com um navegador de Internet já instalado, o Firefox, um navegador excelente por sinal, mas para melhorar ainda mais a sua experiência de usuário, você pode preferir querer usar o navegador que você já está acostumado a usar, como o famoso Google Chrome. E aqui deixo uma sugestão... Você pode instalar o Google Chrome em sua forma tradicional, ou também pode instalar o Chromium, que é nada mais que a versão oficial da Google do Chrome, mas com seu código fonte aberto, fazendo assim um passo a mais de respeito para sua privacidade. Você praticamente não vai notar diferenças de funcionamento entre um e outro, a não ser o ícone que é diferente, rs.</p>
+                
+                <p>Se quiser instalar o Google Chrome você pode ir até o site de download do Chrome para baixar o instalador (similarmente como faria no Windows com os arquivos .exe) e baixar um .deb e em seguida ir até a pasta do mesmo para instalar via terminal com:</p>
+                
+                <blockquote><i><em>$ cd Downloads/ &amp;&amp; sudo apt install ./nomedoarquivo.deb</em></i></blockquote>
+                
+                <p>Note que foi usado o comando cd para a troca de pasta, &quot;cd&quot; vem da abreviação de &quot;Change Directory&quot; e o resto do comando é o que já vinhamos fazendo, exceto que estamos instalando um arquivo local e não buscando no servidor por isso &quot;./&quot; antes do nome. Outra observação é que você pode apertar TAB para autocompletar nomes ou comandos no Terminal, neste caso, não precisa digitar exatamente letra por letra.</p>
+                
+                <p>Já se caso você quiser instalar o Chromium, é ainda mais fácil, pois o mesmo está nos servidores do Ubuntu justamente por ser código aberto:</p>
+                
+                <blockquote><i><em>$ sudo apt install chromium-browser</em></i></blockquote>
+                
+                <p>A partir deste ponto você deve ter um sistema operacional minimamente pronto para seu uso diário. Eu não posso adivinhar o que você costuma instalar a partir daí, então fica meio relativo a partir daqui, assim, deixo nas mãos de vocês o que vocês podem querer instalar ou não.</p>
+                
+                <p>Caso você queira instalar alguma coisa que não saiba o nome exato do pacote, lembre-se que a Internet é sua amiga e você pode pesquisar o nome dos pacotes na própria Internet, existem muitas comunidades Linux por aí se caso precisar de ajuda, ou você pode tentar achar através do comando a seguir, que também trará uma descrição dos pacotes ao lado do nome.</p>
+                
+                <blockquote><i><em>$ sudo apt search nomedopacote</em></i></blockquote>
+                
+                <p>A função &quot;search&quot; vai buscar nos servidores e listar todos os pacotes que tiverem o nome parecido ou que fizerem referência ao que você digitou.</p>
+                <p>Você também pode fazer essa busca visualmente pela própria loja que já vem com o Ubuntu e todos os processos ensinados dos comandos também podem serem feitos visualmente, mas aprender nunca é demais!</p>
+                
+                <h1 class="darkPageTitle">REVISANDO...</h1>
+                
+                <p>Para atualizar o sistema operacional e instalar as atualizações (se houver):</p>
+                <blockquote><i><em>$ sudo apt update &amp;&amp; sudo apt upgrade</em></i></blockquote>
+                
+                <p>Para instalar programas:</p>
+                <blockquote><i><em>$ sudo apt install nomedopacote</em></i></blockquote>
+                
+                <p>Para remover programas:</p>
+                <blockquote><i><em>$ sudo apt remove nomedopacote</em></i></blockquote>
+                
+                <p>Para pesquisar um pacote nos servidores:</p>
+                <blockquote><i><em>$ sudo apt search nomedopacote</em></i></blockquote>
+
+                <br>
+                
+                <div class="divider"></div>
+                    <div>
+                        <div class="row">
+                            <div class="col s6 m6 l6">
+                                <h5>Escrito por <strong>Guilherme Faura</strong></h5>
+                                <img src="../../media/images/guilhermefaura.jpg" alt="Guilherme Faura" class="circular-image responsive-img">
+                            </div>
+
+                            <div class="col s6 m6 l6">
+                                <p><strong>Data:</strong> 17/01/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <!-- Collapsible -->
+    <script src="js/collapsible.js"></script>
+</body>
+</html>
