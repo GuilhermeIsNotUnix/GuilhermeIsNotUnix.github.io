@@ -1,3 +1,19 @@
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: light;
+}
+
+.purple-light-text {
+    color: #9f99a6;
+}
+
+.wide-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 95%;
+}
+
 .titles {
     font-family: 'TimeWarner', sans-serif;
     color: #4d5d91;
@@ -18,7 +34,16 @@
     font-family: 'Helvetica 65 Medium', sans-serif;
 }
 
+.text-size-medium {
+    font-size: 1.200rem;
+}
+
 .pageBackground {background-color: black;}
+
+.dark-background-purple {
+    background: rgb(20,0,41);
+    background: radial-gradient(circle, rgba(20,0,41,1) 0%, rgba(3,0,7,1) 100%);
+}
 
 .underline {text-decoration: underline;}
 
@@ -27,6 +52,12 @@ a {color: #c5fffd;}
 strong {font-weight: bold;}
 
 .subtitle-text {font-size: 1.125rem;}
+
+.big-circular-image {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
 
 .circular-image {
     width: 40%;

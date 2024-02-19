@@ -7,6 +7,10 @@
         <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import Montserrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!--Import compiled and minified CSS -->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!-- Custom CSS-->
@@ -18,6 +22,8 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
+        <script src="https://kit.fontawesome.com/4890cd21f5.js" crossorigin="anonymous"></script>
+
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
@@ -27,106 +33,211 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
-        <title>Faura Notes</title>
+         <!-- Meta tags og adicionais -->
+        <meta property="og:title" content="Guilherme Faura Portfólio">
+        <meta property="og:description" content="Trabalhei como bolsista CNPq fazendo pesquisa de iniciação científica no laboratório de dispositivos e sensores orgânicos (LaDSOr) da minha universidade (FCT-UNESP) e fiz aquecedor à base de grafeno induzido a laser em minha pesquisa. Além disso, também tenho experiência com vários projetos que fiz em Java, Go e Python. Em geral, tenho um grande interesse em computação distribuída, criptografia e segurança no geral.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://guilhermeisnotunix.github.io/">
+
+        <!-- Meta tags og para imagem de capa -->
+        <meta property="og:image" content="https://guilhermeisnotunix.github.io/media/images/guilhermefaura.jpg">
+        <meta property="og:image:secure_url" content="https://guilhermeisnotunix.github.io/media/images/guilhermefaura.jpg">
+        <meta property="og:image:width" content="1920">
+        <meta property="og:image:height" content="1080">
+        <meta property="og:image:alt" content="Guilherme Faura e código em Go no fundo">
+
+        <title>Guilherme Faura Portfólio</title>
     </head>
 
-    <body class="black readingFont">
-        <div class="container white-text">
-            <div>
-                <h1 class="center darkPageTitle">FAURA NOTES</h1>
+    <body class="dark-background-purple readingFont">
+        <div class="wide-container white-text">
+            <br><br><br>
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <h1 class="font-montserrat">Guilherme Faura</h1>
+                        <p class="subtitle-text purple-light-text">Trabalhei como bolsista CNPq fazendo pesquisa de iniciação científica no laboratório de dispositivos e sensores orgânicos (LaDSOr) da minha universidade (FCT-UNESP) e fiz aquecedor à base de grafeno induzido a laser em minha pesquisa. Além disso, também tenho experiência com vários projetos que fiz em Java, Go e Python. Em geral, tenho um grande interesse em computação distribuída, criptografia e segurança no geral.</p>
+                        <a href="#contato" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Contato</a>
+                        <br><br>
+                    </div>
 
-                <p class="white-text flow-text">Faura Notes é um acervo de notas abertas de estudo escritas por Guilherme Faura, físico e músico. Que essas notas te ajudem. Em caso de algum erro em alguma nota, por favor informe em <u>guilhermefaura@gmail.com</u> apontando o erro e a nota.</p>
-
-                <ul class="collapsible expandable black-text">
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">functions</i>Física</div>
-                        <div class="collapsible-body white">
-                            <table class="responsive-table">
-                                <thead><b>Termodinâmica</b></thead>
-
-                                <tbody>
-                                    <tr>
-                                        <div class="collection">
-                                            <a href="posts/physics/transferencia_de_calor.html" class="collection-item">Transferência de calor</a>
-                                        </div>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <table class="responsive-table">
-                                <thead><b>Eletricidade</b></thead>
-
-                                <tbody>
-                                    <tr>
-                                        <div class="collection">
-                                            <a href="posts/physics/cargas_eletricas.html" class="collection-item">Cargas elétricas</a>
-                                        </div>
-                                    </tr>
-
-                                    <tr>
-                                        <div class="collection">
-                                            <a href="posts/physics/eletrizacao.html" class="collection-item">Eletrização</a>
-                                        </div>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <table class="responsive-table">
-                                <thead><b>Notas e Reflexões</b></thead>
-
-                                <tbody>
-                                    <tr>
-                                        <div class="collection">
-                                            <a href="posts/physics/a_arrogancia_academica_e_os_fisicos_de_sangue.html" class="collection-item">A Arrogância Acadêmica e os Físicos de Sangue</a>
-                                        </div>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="col s12 m6 l6">
+                        <div class="center">
+                            <img src="media/images/guilhermefaura.jpg" alt="Guilherme Faura" class="responsive-img hoverable">
                         </div>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">battery_charging_full</i>Eletrônica</div>
-                        <div class="collapsible-body white">
-                            <div class="collection">
-                                <a href="posts/electronics/resistores.html" class="collection-item">Resistores</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">music_note</i>Música</div>
-                        <div class="collapsible-body white">
-                            <div class="collection">
-                                <a href="posts/music/manifesto_metal.html" class="collection-item">Manifesto Metal</a>
-                                <a href="posts/music/Um_guia_para_composição.html" class="collection-item">Um guia de composição</a>
-                                <a href="posts/music/improviso_nao_vem_do_nada.html" class="collection-item">Improviso não vem do nada</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">keyboard</i>Computação</div>
-                        <div class="collapsible-body white">
-                            <table class="responsive-table">
-                                <thead><b>Linux</b></thead>
-
-                                <tbody>
-                                    <tr>
-                                        <div class="collection">
-                                            <a href="posts/computers/oquefazerdepoisdeinstalaroubuntu.html" class="collection-item">O que fazer depois de instalar Ubuntu 22.04 LTS: Os primeiros passos no mundo Linux</a>
-                                        </div>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                
+                <blockquote class="flow-text center-align"><i>Tocar uma nota errada é insignificante. Tocar sem paixão é imperdoável.<br>—Ludwig van Beethoven</i></blockquote>
             </div>
 
-            <blockquote class="flow-text"><i>Tocar uma nota errada é insignificante. Tocar sem paixão é imperdoável.<br>—Ludwig van Beethoven</i></blockquote>
+            <div class="section">
+                <h1 class="font-montserrat center"><b>Sobre mim</b></h1>
+                <div class="container text-size-medium purple-light-text">
+                    <p>Graduando em Física na FCT-UNESP. Também cursei Ciência da Computação na UNOESTE no passado. E nunca parei de programar, de fato a maioria dos meus projetos públicos de software podem ser encontrados no meu perfil do GitHub <a href="https://github.com/GuilhermeIsNotUnix" target="_blank">&lt;https://github.com/GuilhermeIsNotUnix&gt;</a>.</p>
+                
+                    <p>Programo principalmente nas linguagens Java e Go e isso se torna realmente bonito em um ambiente como o Linux, na qual também faço uso, me permitindo diversos tipos de aplicações. Mas também programo em Python e tenho alguns projetos, um deles se trata de uma automatização de uma fonte programável de corrente e tensão elétrica Keithley 2420, na qual é possível controla-la via GPIB para diversos tipos de medidas (IxV, 4-terminal-sensing...).</p>
+                    
+                    <p>Na Computação no geral, me interesso muito em Computação Distribuída, Criptografia e Segurança no geral. Venho desenvolvendo um software, chamado Grifforix, um algoritmo de criptografia ainda experimental de gerador de senhas seguras que são realmente randômicas estatisticamente (na computação há uma diferença entre pseudorrandômico e algo realmente randômico — que faz toda diferença para um projeto de segurança, já que algo pseudorrandômico é determinístico, algo que pode ser reproduzido novamente...), mas no meu acervo de softwares também é possível de se encontrar coisas variadas como algoritmos fundamentais da computação, meu próprio blog, ou projetos diversos.</p>
+                    
+                    <p>Na Física me interesso muito pelo Eletromagnetismo e tive a oportunidade de fazer pesquisa de iniciação científica em um laboratório chamado LaDSOr (Laboratório de Dispositivos e Sensores Orgânicos). Pude estudar de perto a fabricação de componentes eletrônicos (tais como resistores, diodos, transistores...) desde seu estado mais fundamental, fazendo o estudo da ciência dos materiais, por meio de experimentos, para que sejam materiais eficientes, de baixo custo, usando equipamentos diversos para medições de laboratório, técnicas experimentais como &quot;spray couting&quot;, &quot;4 terminal-sensing (método de 4 pontas)&quot;, microscopia eletrônica de varredura (MEV), perfilometria... Isso me deu muita experiência, não só sobre Pesquisa Acadêmica, mas também Escrita Científica e Analise de Dados, já que sempre é necessário analisar os dados obtidos, fazer cálculos e procedimentos estatísticos de laboratório, devido a natureza da física experimental.</p>
+                    
+                    <p>Em minha pesquisa de iniciação científica concluída desenvolvi um aquecedor flexível baseado em grafeno induzido a laser, pesquisei também sobre materiais de carbono. Desenvolvi muito a escrita científica nesse período, minhas habilidades experimentais e analiticas.</p>
+                </div>    
+            </div>
 
-            <br>
+            <div class="section center">
+                <h1 class="font-montserrat"><b>Projetos em destaque</b></h1>
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <div class="center">
+                            <img src="media/images/software/grifforix-screenshot.png" alt="Grifforix" class="responsive-img hoverable">
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h1 class="font-montserrat">Grifforix</h1>
+                        <div class="subtitle-text purple-light-text left-align flow-text">
+                            <p>Grifforix visa ser um gerador de senhas fortes e seguras feito em Java, ele usa a classe 'java.security.SecureRandom' do Java. Tenho planos de torná-lo também um software autenticador seguro no futuro. Grifforix está atualmente experimental na versão <b>v.0.6.0-alpha</b>.</p>
+
+                            <p>Grifforix não usa métodos comuns como o famoso 'rand()' do C - que é uma função pseudo-aleatória para geração de números, mas na verdade usa a classe 'SecureRandom' do Java que gera um número aleatório criptograficamente seguro, assim garantindo um verdadeiro 'RNG' para geração da senha.</p>
+                        </div>
+                        <a href="software/grifforix.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
+                    </div>
+                </div>
+                
+                <br><br><br><br>
+
+                <div class="divider"></div>
+
+                <br><br><br><br>
+                
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <h1 class="font-montserrat">Gambit</h1>
+                        <div class="subtitle-text purple-light-text left-align">
+                            <p>Gambit é um software utilitário para facilitar o agendamento de desligamento de máquinas Windows, de forma automatizada, feito na linguagem de programação Go com a biblioteca Fyne GUI.</p>
+                        </div>
+                        <a href="software/gambit.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <div class="center">
+                            <img src="media/images/software/gambit.PNG" alt="Gambit" class="responsive-img hoverable">
+                        </div>
+                    </div>
+                </div>
+
+                <br><br><br><br>
+
+                <div class="divider"></div>
+
+                <br><br><br><br>
+
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <div class="center">
+                            <img src="media/images/software/fauranotes.png" alt="Faura Notes" class="responsive-img hoverable">
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h1 class="font-montserrat">Faura Notes</h1>
+                        <div class="subtitle-text purple-light-text left-align flow-text">
+                            <p>Faura Notes é um acervo de notas de estudo gratuitas e públicas escritas por Guilherme Faura para servir como um repositório aberto de estudos e também ajudar pessoas que possam se beneficiar estudando com os materiais.</p>
+                        </div>
+                        <a href="fauranotes.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Acessar</a>
+                    </div>
+                </div>
+
+                <br><br><br><br>
+
+                <div class="divider"></div>
+
+                <br><br><br><br>
+
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <h1 class="font-montserrat">Orakol</h1>
+                        <div class="subtitle-text purple-light-text left-align">
+                            <p>Orakol é um software simples de citações que foi feito para praticar solicitações HTTP e manipulação básica de JSON na linguagem Python usando PySide (Python para QT) para a GUI. Para obtenção de citações via HTTP foi utilizada a seguinte API: <a href="https://favqs.com/api/" target="_blank">https://favqs.com/api/</a></p>
+                        </div>
+                        <a href="https://github.com/GuilhermeIsNotUnix/Orakol" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
+                        <br><br>
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <div class="center">
+                            <img src="media/images/software/orakol.jpeg" alt="Orakol" class="responsive-img hoverable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section center">
+                <h1 class="font-montserrat center-align"><b>Skills</b></h1>
+                <table>
+                    <tr>
+                        <td valign="top" width="33%">
+                            <h4 class="flow-text center"><b>FrontEnd</b></h4>
+                            <div align="center">  
+                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" class="hoverable"/></a>  
+                                <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" class="hoverable"/></a>  
+                                <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" class="hoverable"/></a>  
+                            </div>
+                        </td>
+                        
+                        <td valign="top" width="33%">
+                            <h4 class="flow-text center"><b>BackEnd</b></h4>
+                            <div align="center">  
+                                <a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" class="hoverable"/></a>  
+                                <a href="https://go.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/go-original.svg" alt="Go" height="50" class="hoverable"/></a>  
+                                <a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" class="hoverable"/></a>  
+                                <a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" class="hoverable"/></a>  
+                                <a href="https://www.cprogramming.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" class="hoverable"/></a>  
+                            </div>
+                        </td>
+                        
+                        <td valign="top" width="33%">
+                            <h4 class="flow-text center"><b>DevOps</b></h4>  
+                            <div align="center">  
+                                <a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" class="hoverable"/></a>  
+                                <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" class="hoverable"/></a>  
+                                <a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" class="hoverable"/></a>  
+                                <a href="https://www.arduino.cc/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" class="hoverable"/></a>  
+                                <a href="https://www.latex-project.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/latex.png" alt="LaTeX" height="50" class="hoverable"/></a>  
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <br><br><br>
+
+            <div class="section center">
+                <h1 id="contato" class="font-montserrat"><b>Contato</b></h1>
+                <p class="flow-text purple-light-text">guilherme.faura@gmail.com</p>
+                <div class="row">
+                    <div class="col s3">
+                        <a href="https://www.linkedin.com/in/guilhermefaura" target="_blank"><i class="fab fa-linkedin large white-text hoverable"></i></a>
+                    </div>
+
+                    <div class="col s3">
+                        <a href="https://github.com/GuilhermeIsNotUnix" target="_blank"><i class="fab fa-github large white-text hoverable"></i></a>
+                    </div>
+
+                    <div class="col s3">
+                        <a href="mailto:guilherme.faura@gmail.com"><i class="fa-solid fa-envelope large white-text hoverable"></i></a>
+                    </div>
+
+                    <div class="col s3">
+                        <a href="https://instagram.com/guilhermeisnotunix" target="_blank"><i class="fab fa-instagram large white-text hoverable"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br>
 
             <div class="flow-text grey-text text-lighten-1">
                 <p>\[\text{And God said...}\]</p>
