@@ -22,7 +22,7 @@
 .darkPageTitle {
     font-family: 'TimeWarner', sans-serif;
     color: #ccffcc;
-    font-size: 3.75rem;
+    font-size: 3.5rem;
 }
 
 .readingFont {
@@ -32,6 +32,14 @@
     font-family: 'Helvetica 45 Light', sans-serif;
     font-family: 'Helvetica 55 Roman', sans-serif;
     font-family: 'Helvetica 65 Medium', sans-serif;
+}
+
+@media screen and (min-width: 601px) {
+    p{font-size: 1.5vw;}
+}
+
+@media screen and (max-width: 600px) {
+    p{font-size: 4.7vw;}
 }
 
 .text-size-medium {
