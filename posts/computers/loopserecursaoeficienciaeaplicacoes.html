@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Import TimeWarner font-->
+    <link href="https://fonts.cdnfonts.com/css/timewarner" rel="stylesheet">
+    <!--Import Helvetica Neue font-->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- EB Garamond font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
+    <!--Import compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+    <!-- Custom CSS-->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/c.css" rel="stylesheet"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Meta tags og adicionais -->
+    <meta property="og:title" content="Loops e Recursão: Eficiência e Aplicações">
+    <meta property="og:description" 
+        content="Aprenda sobre Recursão, o que é, como funciona, aplicações, algumas curiosidades e veja também um comparativo sobre recursividade vs estruturas de repetição convencionais.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://guilhermeisnotunix.github.io/posts/computers/loopserecursaoeficienciaeaplicacoes.html">
+
+    <!-- Meta tags og para imagem de capa -->
+    <meta property="og:image" content="https://guilhermeisnotunix.github.io/media/images/loopserecursaoeficienciaeaplicacoes.jpg">
+    <meta property="og:image:secure_url" content="https://guilhermeisnotunix.github.io/media/images/loopserecursaoeficienciaeaplicacoes.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Espiral azul ilustrando a recursividade, com o título em destaque do artigo Loops e Recursão: Eficiência e Aplicações">
+
+    <title>Loops e Recursão: Eficiência e Aplicações</title>
+</head>
+
+<body class="black readingFont white-text">
+    <div class="container">
+        <div class="row">
+            <div class="s12 m6">
+                <a class="btn-floating btn-large waves-effect waves-light white" href="../../fauranotes.html"><i class="material-icons black-text">arrow_back</i></a>
+                <h3 class="left darkPageTitle">LOOPS E RECURSÃO: EFICIÊNCIA E APLICAÇÕES</h3>
+                <p class="grey-text subtitle-text"><i>~10 min. de leitura</i><br><a href="https://guilhermeisnotunix.github.io">Guilherme Faura</a>, 15/07/2024</p>
+                                
+                <p class="grey-text subtitle-text">Aprenda sobre Recursão, o que é, como funciona, aplicações, algumas curiosidades e veja também um comparativo sobre recursividade vs estruturas de repetição convencionais.</p>
+                
+                <br>
+                <div class="divider"></div>
+                
+                <p>Computacionalmente, quando fazemos algum algoritmo e tratamos estruturas de dados no processo, muitas vezes precisamos de uma forma de repetição para realizar certas operações.</p>
+
+                <p>Tradicionalmente a forma que estamos familiarizados a fazer é através de funções <strong><em>for()</em></strong> ou <strong><em>while()</em></strong> (e suas variantes) em linguagens de <strong><em>família-C</em></strong>. Como nos dois exemplos a seguir:</p>
+
+                <pre>
+                    <code class="language-c">
+                        #include &lt;stdio.h&gt;
+                        
+                        int main() {
+                            int vec[5] = {0, 1, 2, 3, 4}; // Vetor genérico representando os dados
+                            
+                            printf("{");
+                            // Imprimindo cada elemento do vetor...
+                            for(int i = 0; i < 5; i++) {
+                                printf("%d ", vec[i]);
+                            }
+                            printf("}");
+                            
+                            return 0;
+                        }                            
+                    </code>
+                </pre>
+
+                <pre>
+                    <code class="language-c">
+                        #include &lt;stdio.h&gt;
+
+                        int main() {
+                            int vec[5] = {0, 1, 2, 3, 4}; // Vetor genérico representando os dados
+                            
+                            printf("{");
+                            int i = 0;
+                            // Imprimindo cada elemento do vetor...
+                            while(i < 5) {
+                                printf("%d ", vec[i]);
+                                i++;
+                            }
+                            printf("}");
+                            
+                            return 0;
+                        }                  
+                    </code>
+                </pre>
+                
+                <p>Mas você sabia que essas não são as únicas formas de se processar dados? Na verdade, muitas linguagens de programação nem possuem loops baseados em <strong><em>for()</em></strong> ou <strong><em>while()</em></strong> ou suas variantes. Isso foi popularizado pela linguagem <strong><em>C</em></strong>, criada em 1972, e, seu grande sucesso de sua época influenciou o mundo das linguagens de programação posteriores, tais como <strong><em>C++</em></strong>, <strong><em>Java</em></strong>, <strong><em>PHP</em></strong> e <strong><em>C#</em></strong>, que também adotaram sintaxes muito parecidas, criando familiaridade e adoção entre programadores.</p>
+
+                <p>Na própria linguagem <strong><em>C</em></strong>, há ainda uma outra forma de se fazer repetições, esta é chamada de recursão. Recursão ou recursividade é um processo na qual um trecho de código pode chamar a si mesmo dentro do seu próprio escopo, repetindo uma operação, por exemplo, uma função que em sua declaração chama a si mesmo em determinado momento — assim, sendo possível de se fazer uma repetição sem de fato precisar utilizar formas tradicionais de repetições, apenas variando os parâmetros sendo passados na função a cada execução. Vejamos um exemplo em <strong><em>C</em></strong> de recursividade reescrevendo a partir dos mesmos exemplos mostrados anteriormente:</p>
+
+                <pre>
+                    <code class="language-c">
+                        #include &lt;stdio.h&gt;
+
+                        void imprimir_vetor(int vetor[], int tamanho, int indice) {
+                            if(indice == tamanho) {
+                                return;
+                            }
+                            
+                            printf("%d ", vetor[indice]);
+                            imprimir_vetor(vetor, tamanho, indice + 1);
+                        }
+                            
+                        int main() {
+                            int vetor[5] = {0, 1, 2, 3, 4}; // Vetor genérico representando os dados
+                            
+                            printf("{");
+                            imprimir_vetor(vetor, 5, 0); // Chamando a função recursiva
+                            printf("}");
+                              
+                            return 0;
+                        }           
+                    </code>
+                </pre>
+
+                <p>Note que, em nenhum momento foram utilizadas estruturas de repetições tradicionais da linguagem <strong><em>C</em></strong> para isso, somente recursividade. Observe que temos uma função externa da main chamada <strong><em>imprimir_vetor()</em></strong> que recebe 3 parâmetros <strong><em>(vetor, tamanho, indice)</em></strong>, onde <strong><em>vetor</em></strong> seria sua própria estrutura de dados sendo passada, que neste caso é um vetor simples, <strong><em>tamanho</em></strong> seria o tamanho do seu vetor, <strong><em>5</em></strong> neste caso e, <strong><em>indice</em></strong> seria uma variável para controlar o índice da sua operação similarmente quando você tem as estruturas de repetições que passam por cada elemento acessando os dados através de índices (geralmente chamados de <strong><em>i</em></strong>).</p>
+
+                <p>Chamamos na main a função <strong><em>imprimir_vetor()</em></strong> passando como parâmetros nosso vetor, seu tamanho e o numero inicial para o índice, sendo então <strong><em>imprimir_vetor(vetor, 5, 0);</em></strong>. Assim, na nossa função, que recebe esses parâmetros, primeiro fazemos uma checagem se o índice e o tamanho são iguais pelo seguinte motivo:</p>
+
+                <ol>
+                    <li>Para checar a condição de término do processo. Porque por mais que a função seja do tipo <strong><em>void</em></strong> (a principio sem retorno de nada, já que só está sendo impresso os dados), com essa condição é possível de saber quando a operação termina por completo e então, quando terminar, fazer um <strong><em>return;</em></strong> (vazio mesmo), justamente para quebrar o fluxo e terminar.</li>
+                </ol>
+
+                <p>Em seguida, é possível de se analisar a recursividade acontecendo de fato. Primeiro é impresso o elemento na qual o índice se encontra direto, em seguida, é chamado a função novamente, com os mesmos parâmetros do vetor e o seu tamanho, exceto que, ao passar a variável do índice, é incrementado o índice em 1.</p>
+                
+                <p>O que acontecerá é que a função <strong><em>imprimir_vetor()</em></strong> será executada novamente, mas desta vez com o índice agora começando de <strong><em>1</em></strong> ao invés de <strong><em>0</em></strong>, sendo esta então a segunda vez que a função está sendo executada e a mesma coisa será realizada posteriormente repetidamente até que o índice se torne numericamente de mesmo valor do tamanho do vetor, no nosso caso 5. E quando isso acontecer, significa que o processo terminou e o fluxo será quebrado com o <strong><em>return;</em></strong>.</p>
+                
+                <p>Repare também que, a chamada da recursão ocorre na ultima linha de execução da função <strong><em>imprimir_vetor()</em></strong>. Isto é chamado de “Recursão de Cauda”, ou seja, quando a recursividade é efetuada na ultima declaração de uma função e é a última execução de fato, em outras palavras, quando não resta mais nada para ser executado. E a Recursão de Cauda é especial, pois, muitos compiladores fazem otimizações pesadas para este tipo especifico de recursão visando também evitar o estouro de pilha (no fundo convertendo-os para loops convencionais de forma que se tornem mais eficientes em termos de performance) — mas isso nem sempre é possível e nem todas as linguagens de programação fazem. O que geralmente não acontece para uma “função recursiva sem cauda” (quando a recursividade não é feita como a última execução de uma função), sendo ainda mais “custosa” em termos de desempenho.</p>
+                
+                <p>Muito interessante né? De fato algumas outras linguagens de programação, tais como <strong><em>Lisp</em></strong>, <strong><em>Scheme</em></strong>, <strong><em>Prolog</em></strong> e <strong><em>Haskell</em></strong> não usam formas tradicionais de repetições como as que estamos familiarizados, mas na verdade, por possuírem paradigmas de programação diferentes, utilizam conceitos recursivos em suas operações.</p>
+                
+                <p>Mas, existem certos detalhes sobre recursão, que podemos explorar ainda mais a fundo e fazermos uma comparação para reflexão de suas vantagens e desvantagens.</p>
+                
+                <p>A principal vantagem a priori da recursividade seria, talvez que, ela endorsa uma certa “modularidade natural” no código, em outras palavras, para que ela funcione corretamente, é necessário que o desenvolvedor torne o código mais modular, escrevendo funções externas, como demonstrado no exemplo acima. Essa “modularidade natural” permite uma organização e separação de trechos de códigos em blocos externos menores que podem ser reutilizáveis ao decorrer do sistema — um principio fundamental das boas praticas de programação.</p>
+                
+                <p>No entanto, a recursividade traz consigo também desvantagens, sendo estas, principalmente relacionadas com desempenho e legibilidade… </p>
+                
+                <p>Tratando-se primeiramente sobre desempenho, imagine que a cada nova chamada da função há um custo de performance associado, cada chamada recursiva gera um quadro de pilha (stack frame) onde os parametros da função são copiados, o que pode gerar um custo excessivo para a memória. No exemplo exposto existem poucos parâmetros — um simples vetor, com somente 5 elementos numéricos dentro, um inteiro para tamanho e outro inteiro para o índice — mas imagine um caso real com uma grande quantidade de dados para ser processada e uma função com mais parâmetros, observe que uma função inteira com seus parâmetros estão sendo alocados na memoria de novo e de novo, sendo continuamente copiadas para a memoria para cada “vez da repetição” (cada chamada gerando um novo quadro de pilha com o endereço de retorno, variáveis locais e parâmetros da função). Note que, em <strong>C</strong>, ao passar arrays para funções, passamos apenas o ponteiro para o array, não uma cópia dos dados. No entanto, os parâmetros e outras variáveis locais são duplicadas em cada quadro de pilha, contribuindo para o uso de memória. Para demonstrar isso, é possível de se fazer até uma análise de um benchmark mínimo (não tão rigoroso e não tão controlado) comparando o desempenho das estruturas de repetição.</p>
+                
+                <p>(Note que um benchmark mais rigoroso deveria ser realizado em um ambiente (uma máquina) mais controlada, que estivesse sem (ou minimamente sem) muitos processos sendo executados de fundo para não interferir (por exemplo atrasar ou variar) na medição, e também uma maior quantidade de dados para se processar, assim, para se ter resultados mais precisos… Mas, realizando o seguinte benchmark minimo, com um simples programa que soma todos os números de <strong><em>0</em></strong> a <strong><em>n</em></strong>, sendo <strong><em>n</em></strong> uma quantidade fixa, neste caso para um <strong><em>n = 10000</em></strong>, já é possível de enxergar o ponto…)</p>
+
+                <pre>
+                    <code class="language-c">
+                        #include &lt;stdio.h&gt;
+                        #include &lt;time.h&gt;
+                            
+                        // Função recursiva
+                        int recursiva(int n) {
+                            if (n == 0) {
+                                return 0;
+                            } else {
+                                return n + recursiva(n - 1);
+                            }
+                        }
+                            
+                        // Função com loop while
+                        int loop_while(int n) {
+                            int soma = 0;
+                            int i = 0;
+                            while(i <= n) {
+                                soma += i;
+                                i++;
+                            }
+                            return soma;
+                        }
+                            
+                        // Função com loop for
+                        int loop_for(int n) {
+                            int soma = 0;
+                            for(int i = 0; i <= n; i++) {
+                                soma += i;
+                            }
+                            return soma;
+                        }
+                            
+                        int main() {
+                            int n = 10000;
+                            
+                            clock_t start, end;
+                            
+                            // Medir tempo de execução da função recursiva
+                            start = clock();
+                            int resultado_recursivo = recursiva(n);
+                            end = clock();
+                            double tempo_recursivo = ((double)(end - start)) / CLOCKS_PER_SEC;
+                            
+                            // Medir tempo de execução da função com loop while
+                            start = clock();
+                            int resultado_while = loop_while(n);
+                            end = clock();
+                            double tempo_while = ((double)(end - start)) / CLOCKS_PER_SEC;
+                            
+                            // Medir tempo de execução da função com loop for
+                            start = clock();
+                            int resultado_for = loop_for(n);
+                            end = clock();
+                            double tempo_for = ((double)(end - start)) / CLOCKS_PER_SEC;
+                            
+                            // Mostrar os resultados
+                            printf("Resultado recursivo: %d\n", resultado_recursivo);
+                            printf("Tempo de execução recursivo: %f segundos\n\n", tempo_recursivo);
+                            
+                            printf("Resultado loop while: %d\n", resultado_while);
+                            printf("Tempo de execução loop while: %f segundos\n\n", tempo_while);
+                            
+                            printf("Resultado loop for: %d\n", resultado_for);
+                            printf("Tempo de execução loop for: %f segundos\n", tempo_for);
+                            
+                            return 0;
+                        }
+                    </code>
+                </pre>
+                
+                <p>Ao executarmos, obtemos os seguintes resultados de saída: </p>
+                
+                <figure class="center">
+                    <img src="../../media/images/computers/loops benchmark.png" class="responsive-img" alt="Imagem mostrando terminal com tempos de execuções dos diferentes métodos de execução."/>
+                    <figcaption class="center"><i>Figura 1. "Tempos de execuções dos diferentes métodos de execução". Guilherme Faura.</i></figcaption>
+                </figure>
+
+                <p>Veja que, ao executar o teste de benchmark, primeiro, todos os resultados das somas foram iguais para o mesmo <strong><em>n</em></strong> fixo, independente do método utilizado, o que mostra que as somas foram realizadas corretamente. Mas, observe a diferença de tempos… Pode-se concluir que: com um benchmark mínimo realizado pôde ser verificado que os tempos dos loops <strong><em>for()</em></strong> e <strong><em>while()</em></strong> foram iguais <em>(e ao executar várias vezes, há uma pequena variação na minha máquina, quase imperceptível entre eles, fazendo com que as vezes o loop <strong>for()</strong> fosse <strong>0.000001 segundo</strong> mais rápido que o <strong>while()</strong>)</em>, enquanto que o tempo da <strong>função recursiva sem cauda</strong> estivesse aproximadamente <strong>7 vezes mais lento</strong> em relação aos outros dois métodos.</p>
+
+                <p>Por questões de didática, há uma simplificação omitida neste último exemplo. Foi usado como exemplo acima especificamente uma <strong>função recursiva sem cauda</strong> — que foi mencionado anteriormente de se tratar do tipo menos otimizado de recursividade — isso foi proposital, justamente para mostrar a diferença... Por mais que pareça uma Recursão de Cauda, a chamada da função estar em sua última linha não significa que ela seja a última coisa a ser executada necessariamente. Repare que, nesse caso, na verdade a chamada da função recursiva não é a última coisa a ser executada de fato pois após a chamada da função <strong><em>recursiva(n - 1)</em></strong> ocorrerá em seguida uma operação pendente de adição <strong><em>n + recursiva(n - 1)</em></strong>, assim, sendo então a adição a última coisa a ser executada na prática, portanto não se classificando mais tecnicamente como uma Recursão de Cauda.</p>
+                
+                <p>Agora, tratando-se de legibilidade, utilizar a recursão também pode não ser ideal. As linguagens usuais, principalmente da <strong><em>família-C</em></strong>, carregam — o que foi mencionado anteriormente sobre — familiaridade. É familiar acompanhar o raciocínio logico de uma repetição baseada em <strong><em>for()</em></strong> ou <strong><em>while()</em></strong>, é intuitivo, enquanto que, o uso da recursão (apesar de geralmente reduzir linhas de códigos) pode confundir programadores que não estão acostumados a acompanhar depurações de funções recursivas ou eles acidentalmente criarem funções recursivas condição de parada (sem fim), justamente por não ser tão comum, sendo mais comum em linguagens baseadas no paradigma funcional, como <strong><em>Haskell</em></strong>. Porém, isso pode ser discutível, já que, quando estruturas de repetições convencionais se tornam mais complexas ou mal escritas — quando por exemplo carregam múltiplas condições iterativas — também se tornam complexas para depurações.</p>
+                
+                <p>No mundo real, principalmente com a ascensão de IAs, recursividade está intimamente relacionado com processamento de linguagem natural, sendo uma forma comum de se analisar e classificar tokens — e pelo mesmo motivo, também é um método comum de aplicação para tokens em compiladores e interpretadores, sendo assim, uma técnica muito utilizada por designers de linguagens de programação. Inclusive, ótimas ideias a serem abordadas aqui neste blog futuramente.</p>
+
+                <h4 class="darkPageTitle">REFERÊNCIAS</h4>
+                <div>
+                    <p>[1] KERNIGHAN, B. W.; RITCHIE, D. M. <strong>The C programming language.</strong></p>
+                    <p>[2] CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C. <strong>Introduction to Algorithms.</strong></p>                    
+                </div>
+                
+                <div class="divider"></div>
+                <div>
+                    <div class="row">
+                        <div class="col s6 m6 l6">
+                            <h5>Escrito por <strong><a href="https://guilhermeisnotunix.github.io" >Guilherme Faura</a></strong></h5>
+                            <img src="../../media/images/guilhermefaura.jpg" alt="Guilherme Faura" class="circular-image responsive-img">
+                        </div>
+
+                        <div class="col s6 m6 l6">
+                            <p><strong>Data:</strong> 15/07/2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <!-- Collapsible -->
+    <script src="js/collapsible.js"></script>
+    <!-- Prism.js for C programming -->
+    <script src="../../js/c.js"></script>
+</body>
+</html>
