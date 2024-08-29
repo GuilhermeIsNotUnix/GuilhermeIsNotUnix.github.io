@@ -10,4 +10,3 @@ Para a produção das notas, conteúdos e mídias, são necessárias algumas fer
 - Para transcrever as notas feitas a mão para HTML com mais praticidade: https://markdowntohtml.com/
 - Para a renderização de equações utilizando LaTEx de forma embutida: https://www.mathjax.org/ 
 - Para geração de SVGs de eletrônica com mais praticidade: https://www.circuit-diagram.org/editor/
-- Para a coloração de SVGs de forma prática, foi utilizado um script em Python desenvolvido por Clederson Cruz (https://github.com/Cledersonbc).
