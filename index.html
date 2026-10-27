@@ -1,243 +1,537 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta name="google-site-verification" content="x_wNa6yZn-bPEFgSSxH4wBcEYAdYPcLABeogu9wCBKA" />
-        <!--Import TimeWarner font-->
-        <link href="https://fonts.cdnfonts.com/css/timewarner" rel="stylesheet">
-        <!--Import Helvetica Neue font-->
-        <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import Montserrat-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <!--Import compiled and minified CSS -->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-        <!-- Custom CSS-->
-        <link rel="stylesheet" href="css/style.css">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html lang="pt-br" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="x_wNa6yZn-bPEFgSSxH4wBcEYAdYPcLABeogu9wCBKA" />
+    
+    <title>Guilherme Faura | Cientista de Dados</title>
 
-        <!-- MathJax-->
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/4890cd21f5.js" crossorigin="anonymous"></script>
 
-        <script src="https://kit.fontawesome.com/4890cd21f5.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts (Inter - muito similar à fonte de sistema do elementary/GNOME) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- FAVICON -->
-        <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
-        <link rel="manifest" href="media/favicon/site.webmanifest">
-        <link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+    <!-- MathJax (Para as equações no rodapé) -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
-         <!-- Meta tags og adicionais -->
-        <meta property="og:title" content="Guilherme Faura Portfólio">
-        <meta property="og:description" content="Trabalhei como bolsista CNPq fazendo pesquisa de iniciação científica no laboratório de dispositivos e sensores orgânicos (LaDSOr) da minha universidade (FCT-UNESP) e fiz um aquecedor à base de grafeno induzido a laser em minha pesquisa. Atualmente faço parte do laboratório LSNIA (Laboratório de Simulação Numérica e Inteligência Artificial) e do grupo PET (Programa de Educação Tutorial). Também tenho experiência com vários projetos que fiz em Kotlin, Java, Go e Python. Em geral, tenho um grande interesse em computação distribuída, inteligência artificial e criptografia.">
-        <meta property="og:type" content="article">
-        <meta property="og:url" content="https://guilhermeisnotunix.github.io/">
+    <!-- Meta tags OG -->
+    <meta property="og:title" content="Guilherme Faura | Portfólio">
+    <meta property="og:description" content="Cientista de Dados com experiência em Machine Learning, Computação de Alto Desempenho (Linux) e Física. Conheça meus projetos, experiências e pesquisas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guilhermeisnotunix.github.io/">
+    <meta property="og:image" content="https://guilhermeisnotunix.github.io/media/images/guilhermefaura.jpg">
 
-        <!-- Meta tags og para imagem de capa -->
-        <meta property="og:image" content="https://guilhermeisnotunix.github.io/media/images/guilhermefaura.jpg">
-        <meta property="og:image:secure_url" content="https://guilhermeisnotunix.github.io/media/images/guilhermefaura.jpg">
-        <meta property="og:image:width" content="1920">
-        <meta property="og:image:height" content="1080">
-        <meta property="og:image:alt" content="Guilherme Faura e código em Go no fundo">
+    <!-- Estilos Customizados Tema Light (Inspiração elementaryOS / GNOME) -->
+    <style>
+        :root {
+            /* Paleta baseada no design moderno do Linux Desktop */
+            --os-blue: #3584e4; /* Azul característico do GNOME/elementary */
+            --os-blue-hover: #1c71d8;
+            --bg-white: #ffffff;
+            --bg-offwhite: #f6f8fa; /* Cinza muito sutil para quebrar o branco */
+            --text-dark: #242424;
+            --text-muted: #5e5e5e;
+            --border-color: #e4e5e7;
+            --radius-large: 12px;
+        }
 
-        <title>Guilherme Faura Portfólio</title>
-    </head>
+        body, html {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-    <body class="dark-background-purple readingFont">
-        <div class="wide-container white-text">
-            <br><br><br>
-            <div class="section">
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <h1 class="font-montserrat">Guilherme Faura</h1>
-                        <p class="subtitle-text purple-light-text">Trabalhei como bolsista CNPq fazendo pesquisa de iniciação científica no Laboratório de Dispositivos e Sensores Orgânicos (LaDSOr) da minha universidade (FCT-UNESP) e fiz um aquecedor à base de grafeno induzido a laser em minha pesquisa. Atualmente faço parte do laboratório <a href="https://lsnia-unesp.github.io/" target="_blank">LSNIA (Laboratório de Simulação Numérica e Inteligência Artificial)</a> e do grupo PET (Programa de Educação Tutorial). Também tenho experiência com vários projetos pessoais que fiz em NodeJS, Java, Go e Python. Em geral, tenho um grande interesse em simulação computacional, computação gráfica e inteligência artificial.</p>
-                        <a href="#contato" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Contato</a>
-                        <br><br>
-                    </div>
+        /* Tipografia */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+        }
 
-                    <div class="col s12 m6 l6">
-                        <div class="center">
-                            <img src="media/images/guilhermefaura.jpg" alt="Guilherme Faura" class="responsive-img hoverable">
-                        </div>
-                    </div>
-                </div>
-                
-                <blockquote class="flow-text center-align"><i>Tocar uma nota errada é insignificante. Tocar sem paixão é imperdoável.<br>—Ludwig van Beethoven</i></blockquote>
+        /* Navbar ultra limpa */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .navbar-item, .navbar-link {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .navbar-item:hover, .navbar-link:hover {
+            color: var(--os-blue);
+            background-color: transparent !important;
+        }
+
+        .navbar-brand .navbar-item {
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section com fundo suave */
+        .hero-section {
+            background: linear-gradient(180deg, var(--bg-offwhite) 0%, var(--bg-white) 100%);
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        /* Cartões e Caixas com estilo Flat/Soft Shadow */
+        .card, .box {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-large);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover, .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-content .title, .card-content .subtitle {
+            color: var(--text-dark);
+        }
+
+        .card-content p {
+            color: var(--text-muted);
+        }
+
+        /* Botões Arredondados e Vivos */
+        .button.is-primary-os {
+            background-color: var(--os-blue);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .button.is-primary-os:hover {
+            background-color: var(--os-blue-hover);
+            color: #fff;
+        }
+        
+        .button.is-light-os {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .button.is-light-os:hover {
+            background-color: var(--bg-offwhite);
+            border-color: #d1d5da;
+        }
+
+        /* Títulos de Seção */
+        .section-title {
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+        }
+
+        /* Tags */
+        .tag {
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .tag.is-light-blue {
+            background-color: #e3f2fd;
+            color: var(--os-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-offwhite);
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-math {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--radius-large);
+            border: 1px solid var(--border-color);
+            display: inline-block;
+        }
+
+        .skill-img-icon {
+            height: 45px;
+            margin: 10px;
+            filter: grayscale(15%);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        .skill-img-icon:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <span style="color: var(--os-blue); margin-right: 5px;">/&gt;</span> Guilherme Faura
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-
-            <div class="section">
-                <h1 class="font-montserrat center"><b>Sobre mim</b></h1>
-                <div class="container text-size-medium purple-light-text">
-                    <p>Graduando em Física na FCT-UNESP. Também cursei Ciência da Computação na UNOESTE no passado. E nunca parei de programar, de fato a maioria dos meus projetos públicos de software podem ser encontrados no meu perfil do GitHub <a href="https://github.com/GuilhermeIsNotUnix" target="_blank">&lt;https://github.com/GuilhermeIsNotUnix&gt;</a>.</p>
-                
-                    <p>Programo principalmente nas linguagens JavaScript, Java e Python e isso se torna realmente bonito em um ambiente como o Linux, na qual também faço uso, me permitindo diversos tipos de aplicações. Também tenho alguns projetos pessoais, um deles se trata de uma automatização de uma fonte programável de corrente e tensão elétrica Keithley 2420 feito em Python, na qual é possível controla-la via GPIB para diversos tipos de medidas (IxV, 4-terminal-sensing...).</p>
-                    
-                    <p>Em Computação no geral, me interesso muito em Simulação Computacional, Computação Gráfica e Inteligência Artificial. Em Física me interesso muito pelo Eletromagnetismo e tive a oportunidade de fazer pesquisa de iniciação científica em um laboratório chamado LaDSOr (Laboratório de Dispositivos e Sensores Orgânicos). Pude estudar de perto a fabricação de componentes eletrônicos (tais como resistores, diodos, transistores...) desde seu estado mais fundamental, fazendo o estudo da ciência dos materiais, por meio de experimentos, para que sejam materiais eficientes, de baixo custo, usando equipamentos diversos para medições de laboratório, técnicas experimentais como &quot;spray couting&quot;, &quot;4 terminal-sensing (método de 4 pontas)&quot;, microscopia eletrônica de varredura (MEV), perfilometria... Isso me deu muita experiência, não só sobre Pesquisa Acadêmica, mas também Escrita Científica e Analise de Dados, já que sempre é necessário analisar os dados obtidos, fazer cálculos e procedimentos estatísticos de laboratório, devido a natureza da física experimental.</p>
-                    
-                    <p>Em minha pesquisa de iniciação científica concluída em 2023 desenvolvi um aquecedor flexível baseado em grafeno induzido a laser, pesquisei também sobre materiais baseados em carbono. Desenvolvi muito a escrita científica nesse período e minhas habilidades experimentais e analiticas.</p>
-                </div>    
-            </div>
-
-            <div class="section center">
-                <h1 class="font-montserrat"><b>Projetos em destaque</b></h1>
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <div class="center">
-                            <img src="media/images/software/grifforix-screenshot.png" alt="Grifforix" class="responsive-img hoverable">
-                        </div>
-                    </div>
-
-                    <div class="col s12 m6 l6">
-                        <h1 class="font-montserrat">Grifforix</h1>
-                        <div class="subtitle-text purple-light-text left-align flow-text">
-                            <p>Grifforix visa ser um gerador de senhas fortes e seguras feito em Java, ele usa a classe 'java.security.SecureRandom' do Java. Tenho planos de torná-lo também um software autenticador seguro no futuro. Grifforix está atualmente experimental na versão <b>v.0.6.0-alpha</b>.</p>
-
-                            <p>Grifforix não usa métodos comuns como o famoso 'rand()' do C - que é uma função pseudo-aleatória para geração de números, mas na verdade usa a classe 'SecureRandom' do Java que gera um número aleatório criptograficamente seguro, assim garantindo um verdadeiro 'RNG' para geração da senha, sendo assim, um método não-determinístico.</p>
-                        </div>
-                        <a href="software/grifforix.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
-                    </div>
-                </div>
-                
-                <br><br><br><br>
-
-                <div class="divider"></div>
-
-                <br><br><br><br>
-                
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <h1 class="font-montserrat">Gambit</h1>
-                        <div class="subtitle-text purple-light-text left-align">
-                            <p>Gambit é um software utilitário para facilitar o agendamento de desligamento de máquinas Windows, de forma automatizada, feito na linguagem de programação Go com a biblioteca Fyne GUI.</p>
-                        </div>
-                        <a href="software/gambit.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
-                        <br><br>
-                    </div>
-
-                    <div class="col s12 m6 l6">
-                        <div class="center">
-                            <img src="media/images/software/gambit.PNG" alt="Gambit" class="responsive-img hoverable">
-                        </div>
-                    </div>
-                </div>
-
-                <br><br><br><br>
-
-                <div class="divider"></div>
-
-                <br><br><br><br>
-
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <div class="center">
-                            <img src="media/images/software/fauranotes.png" alt="Faura Notes" class="responsive-img hoverable">
-                        </div>
-                    </div>
-
-                    <div class="col s12 m6 l6">
-                        <h1 class="font-montserrat">Faura Notes</h1>
-                        <div class="subtitle-text purple-light-text left-align flow-text">
-                            <p>Faura Notes é um acervo de notas de estudo gratuitas e públicas escritas por Guilherme Faura para servir como um repositório aberto de estudos e também ajudar pessoas que possam se beneficiar estudando com os materiais.</p>
-                        </div>
-                        <a href="fauranotes.html" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Acessar</a>
-                    </div>
-                </div>
-
-                <br><br><br><br>
-
-                <div class="divider"></div>
-
-                <br><br><br><br>
-
-                <div class="row">
-                    <div class="col s12 m6 l6">
-                        <h1 class="font-montserrat">Orakol</h1>
-                        <div class="subtitle-text purple-light-text left-align">
-                            <p>Orakol é um software simples de citações que foi feito para praticar solicitações HTTP e manipulação básica de JSON na linguagem Python usando PySide (Python para QT) para a GUI. Para obtenção de citações via HTTP foi utilizada a seguinte API: <a href="https://favqs.com/api/" target="_blank">https://favqs.com/api/</a></p>
-                        </div>
-                        <a href="https://github.com/GuilhermeIsNotUnix/Orakol" target="_blank" class="waves-effect waves-light btn-large grey lighten-5 black-text hoverable">Website</a>
-                        <br><br>
-                    </div>
-
-                    <div class="col s12 m6 l6">
-                        <div class="center">
-                            <img src="media/images/software/orakol.jpeg" alt="Orakol" class="responsive-img hoverable">
-                        </div>
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#experiencia" class="navbar-item">Experiência</a>
+                    <a href="#habilidades" class="navbar-item">Habilidades</a>
+                    <a href="#projetos" class="navbar-item">Projetos</a>
+                    <a href="#certificacoes" class="navbar-item">Certificações</a>
+                    <div class="navbar-item">
+                        <a href="#contato" class="button is-primary-os is-small">Contato</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </nav>
 
-            <div class="section center">
-                <h1 class="font-montserrat center-align"><b>Skills</b></h1>
-                <table>
-                    <tr>
-                        <td valign="top" width="33%">
-                            <h4 class="flow-text center"><b>FrontEnd</b></h4>
-                            <div align="center">  
-                                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" class="hoverable"/></a>  
-                                <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" class="hoverable"/></a>  
-                                <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" class="hoverable"/></a>  
+    <!-- HERO SECTION -->
+    <section class="section hero-section">
+        <div class="container">
+            <div class="columns is-vcentered is-flex-direction-row-reverse">
+                <div class="column is-5 has-text-centered">
+                    <figure class="image is-square" style="max-width: 350px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <img src="media/images/faura.png" alt="Guilherme Faura" style="object-fit: cover;">
+                    </figure>
+                </div>
+                <div class="column is-7">
+                    <h1 class="title is-size-1-desktop is-size-2-mobile" style="line-height: 1.2;">
+                        Soluções guiadas por dados. <br>
+                        <span style="color: var(--os-blue);">Precisão de pesquisa.</span>
+                    </h1>
+                    <h2 class="subtitle is-4 mt-4" style="color: var(--text-muted); font-weight: 400;">
+                        Olá, sou Guilherme Faura. Cientista de Dados, Desenvolvedor e Físico.
+                    </h2>
+                    <p class="content is-medium" style="color: var(--text-muted);">
+                        Experiência em análise e ciência de dados, pesquisa científica e desenvolvimento de software. Combinando o rigor analítico da Física e a flexibilidade da Computação, transformo problemas complexos em sistemas inteligentes e visualizações claras. Sou um usuário entusiasta de Linux, contribuí com muitas traduções para distros como elementaryOS e já atuei ativamente em ambientes de computação de alto desempenho com Ubuntu Server.
+                    </p>
+                    <div class="buttons mt-5">
+                        <a href="#projetos" class="button is-primary-os is-medium">Ver Projetos</a>
+                        <a href="https://github.com/GuilhermeIsNotUnix" target="_blank" class="button is-light-os is-medium">
+                            <span class="icon"><i class="fab fa-github"></i></span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PROFISSIONAL E ACADÊMICA -->
+    <section id="experiencia" class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title section-title">Experiência & Trajetória</h2>
+            </div>
+            
+            <div class="columns is-multiline mt-5">
+                
+                <!-- RDT Data Science -->
+                <div class="column is-12">
+                    <div class="box p-6">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <h3 class="is-size-4 has-text-weight-bold mb-1">Cientista de Dados <span class="is-size-6 has-text-weight-normal" style="color: var(--text-muted);">• Projeto P&D Governamental</span></h3>
+                                    <p class="is-size-6 mb-4 mt-2" style="color: var(--os-blue); font-weight: 500;">Análise e Predição de Dados Rodoviários (2 Anos)</p>
+                                    <p style="color: var(--text-muted);">
+                                        Atuei por dois anos como Cientista de Dados em um extenso projeto governamental de pesquisa e desenvolvimento (RDT). Minha principal responsabilidade foi construir <strong>sistemas de análise automatizada e dinâmica</strong> de parâmetros rodoviários, mapeando dados brutos para normas e diretrizes complexas (manuais rodoviários e PERs - Programa Exploratório de Rodovia).
+                                    </p>
+                                    <p style="color: var(--text-muted);">
+                                        <strong>Impacto Técnico:</strong> Desenvolvi pipelines de dados e dashboards interativos permitindo a seleção, filtragem e cruzamento de múltiplos anos e rodovias (BRs). O sistema gerava automaticamente relatórios de irregularidades, mapas de calor (heatmaps), mapas geográficos e mapeamento de trechos críticos de rodovias. Paralelamente, conduzi <strong>experimentos de Machine Learning</strong> (modelos preditivos e de regressão) baseados na literatura, visando a estruturação de uma futura fase do projeto (RDT 2).
+                                    </p>
+                                    <div class="tags mt-4">
+                                        <span class="tag is-light-blue">Python</span>
+                                        <span class="tag is-light-blue">Pandas</span>
+                                        <span class="tag is-light-blue">Plotly</span>
+                                        <span class="tag is-light-blue">Folium</span>
+                                        <span class="tag is-light-blue">Scikit-Learn</span>
+                                        <span class="tag is-light-blue">Machine Learning</span>
+                                    </div>
+                                </div>
                             </div>
-                        </td>
-                        
-                        <td valign="top" width="33%">
-                            <h4 class="flow-text center"><b>BackEnd</b></h4>
-                            <div align="center">  
-                                <a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" class="hoverable"/></a>  
-                                <a href="https://go.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/go-original.svg" alt="Go" height="50" class="hoverable"/></a>  
-                                <a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" class="hoverable"/></a>  
-                                <a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" class="hoverable"/></a>  
-                                <a href="https://www.cprogramming.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" class="hoverable"/></a>  
+                        </article>
+                    </div>
+                </div>
+
+                <!-- HPC Admin -->
+                <div class="column is-6">
+                    <div class="box p-5" style="height: 100%;">
+                        <div class="content">
+                            <h3 class="is-size-4 has-text-weight-bold mb-1">Administrador de Cluster HPC</h3>
+                            <p class="is-size-6 mb-4 mt-2" style="color: var(--os-blue); font-weight: 500;">FCT-UNESP (lsncs)</p>
+                            <p style="color: var(--text-muted);">
+                                Durante 2 anos, fui técnico bolsista responsável pela manutenção e otimização do cluster computacional de alto desempenho (HPC) da universidade. Atuei inteiramente em ambiente <strong>Linux Ubuntu Server</strong>, dando suporte aos usuarios para pesquisas e monitorando/garantindo a fila de atividade via Bash.
+                            </p>
+                            <div class="tags mt-4">
+                                <span class="tag is-light">Linux</span>
+                                <span class="tag is-light">Ubuntu Server</span>
+                                <span class="tag is-light">Bash</span>
                             </div>
-                        </td>
-                        
-                        <td valign="top" width="33%">
-                            <h4 class="flow-text center"><b>DevOps</b></h4>  
-                            <div align="center">  
-                                <a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" class="hoverable"/></a>  
-                                <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" class="hoverable"/></a>  
-                                <a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" class="hoverable"/></a>  
-                                <a href="https://www.arduino.cc/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" class="hoverable"/></a>  
-                                <a href="https://www.latex-project.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/latex.png" alt="LaTeX" height="50" class="hoverable"/></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pesquisa LaDSOr / LSNIA -->
+                <div class="column is-6">
+                    <div class="box p-5" style="height: 100%;">
+                        <div class="content">
+                            <h3 class="is-size-4 has-text-weight-bold mb-1">Pesquisador Acadêmico</h3>
+                            <p class="is-size-6 mb-4 mt-2" style="color: var(--os-blue); font-weight: 500;">FCT-UNESP (LSNIA e LaDSOr)</p>
+                            <p style="color: var(--text-muted);">
+                                No <strong>LSNIA</strong>, estudo aplicações preditivas baseadas em Machine Learning para problemas físicos. Anteriormente, no <strong>LaDSOr</strong> (Bolsista CNPq), atuei na física experimental, analisando dados de bancada e desenvolvendo um aquecedor baseado em grafeno induzido a laser.
+                            </p>
+                            <div class="tags mt-4">
+                                <span class="tag is-light">Física Computacional</span>
+                                <span class="tag is-light">Física Experimental</span>
+                                <span class="tag is-light">Análise Estatística</span>
                             </div>
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <br><br><br>
-
-            <div class="section center">
-                <h1 id="contato" class="font-montserrat"><b>Contato</b></h1>
-                <p class="flow-text purple-light-text">guilherme.faura@gmail.com</p>
-                <div class="row">
-                    <div class="col s3">
-                        <a href="https://www.linkedin.com/in/guilhermefaura" target="_blank"><i class="fab fa-linkedin large white-text hoverable"></i></a>
+    <!-- SKILLS SECTION -->
+    <section id="habilidades" class="section" style="background-color: var(--bg-offwhite);">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title section-title">Habilidades Técnicas</h2>
+                <p class="subtitle is-6" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    Utilizo diariamente o ecossistema Linux (elementaryOS, Ubuntu, Fedora) para maximizar a produtividade no desenvolvimento e na análise de dados.
+                </p>
+            </div>
+            <div class="columns is-multiline is-centered mt-6 has-text-centered">
+                
+                <div class="column is-4">
+                    <div class="box p-5" style="height: 100%; background: transparent; border: none; box-shadow: none;">
+                        <h3 class="title is-4 mb-3">Data Science & AI</h3>
+                        <p style="color: var(--text-muted);" class="mb-4">Python, Pandas, Plotly, Folium, Scikit-Learn</p>
+                        <img class="skill-img-icon" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" />
                     </div>
-
-                    <div class="col s3">
-                        <a href="https://github.com/GuilhermeIsNotUnix" target="_blank"><i class="fab fa-github large white-text hoverable"></i></a>
+                </div>
+                
+                <div class="column is-4">
+                    <div class="box p-5" style="height: 100%; background: transparent; border: none; box-shadow: none;">
+                        <h3 class="title is-4 mb-3">Software Engineering</h3>
+                        <p style="color: var(--text-muted);" class="mb-4">Go, Dart, Java, C</p>
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" alt="Go" />
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original-wordmark.svg" alt="Dart" />
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java"/>
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" />
                     </div>
-
-                    <div class="col s3">
-                        <a href="mailto:guilherme.faura@gmail.com"><i class="fa-solid fa-envelope large white-text hoverable"></i></a>
-                    </div>
-
-                    <div class="col s3">
-                        <a href="https://www.instagram.com/efeitocafeniano/" target="_blank"><i class="fab fa-instagram large white-text hoverable"></i></a>
+                </div>
+                
+                <div class="column is-4">
+                    <div class="box p-5" style="height: 100%; background: transparent; border: none; box-shadow: none;">
+                        <h3 class="title is-4 mb-3">Infra & Tools</h3>
+                        <p style="color: var(--text-muted);" class="mb-4">Linux, Git, Bash, HTML/CSS</p>
+                        <img class="skill-img-icon" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" />
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" alt="Ubuntu" />
+                        <img class="skill-img-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" alt="Fedora" />
+                        <img class="skill-img-icon" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" />
+                        <img class="skill-img-icon" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" />
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <br><br><br>
+    <!-- PROJETOS SECTION -->
+    <section id="projetos" class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title section-title">Projetos Pessoais em Destaque</h2>
+            </div>
+            <div class="columns is-multiline mt-5">
+                
+                <!-- Yotei -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-power-off fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Yotei</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">Dart | Cross-Platform</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Um software utilitário cross-platform focado no agendamento de desligamento automático de máquinas.</p>
+                            <div class="tags">
+                                <span class="tag is-light">Dart</span>
+                                <span class="tag is-light">Sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="flow-text grey-text text-lighten-1">
+                <!-- Starlax -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-star fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Starlax</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">C++ | Raylib</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Simulação computacional 3D interativa voltada para a simulação e o cálculo de paralaxe estelar.</p>
+                            <div class="tags">
+                                <span class="tag is-light">C++</span>
+                                <span class="tag is-light">Física</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grifforix -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-key fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Grifforix</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">Java | Segurança</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Gerador de senhas seguras não-determinístico (SecureRandom) com foco em segurança e criptografia.</p>
+                            <div class="tags">
+                                <span class="tag is-light">Java</span>
+                                <span class="tag is-light">Criptografia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaman -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-language fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Gaman</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">Python</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Aplicação open-source para treinamento e memorização de Hiragana e Katakana usando repetição visual.</p>
+                            <div class="tags">
+                                <span class="tag is-light">Python</span>
+                                <span class="tag is-light">Educação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gimulator -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-calculator fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Gimulator</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">Python | Automação</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Simulador que estima o valor da aceleração gravitacional automatizando cálculos de bancada experimental.</p>
+                            <div class="tags">
+                                <span class="tag is-light">Python</span>
+                                <span class="tag is-light">Engenharia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LSNIA Website -->
+                <div class="column is-4">
+                    <div class="card p-2">
+                        <div class="card-content">
+                            <div class="is-flex is-align-items-center mb-3">
+                                <span class="icon is-medium mr-2" style="color: var(--os-blue);"><i class="fa-solid fa-globe fa-lg"></i></span>
+                                <p class="title is-4 mb-0">Website LSNIA</p>
+                            </div>
+                            <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">HTML | CSS | Web</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Desenvolvimento e design do portal oficial do Laboratório de Simulação Numérica e Inteligência Artificial.</p>
+                            <a href="https://lsnia-unesp.github.io/" target="_blank" class="button is-small is-light-os mt-2">Visitar Site</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="has-text-centered mt-6">
+                <a href="https://github.com/GuilhermeIsNotUnix" target="_blank" class="button is-primary-os is-medium">Ver Repositórios Completos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICAÇÕES -->
+    <section id="certificacoes" class="section" style="background-color: var(--bg-offwhite);">
+        <div class="container">
+            <div class="has-text-centered">
+                <h2 class="title section-title">Certificações e Cursos</h2>
+            </div>
+            <div class="box mt-5 p-6 has-text-centered">
+                <div class="tags is-centered are-medium">
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Introduction to Machine Learning (Scikit-Learn) - Udemy</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Linux: diretórios e processos - Alura</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Go: A Linguagem do Google / POO - Alura</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Git e GitHub - Alura</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">C Intermediário - Sololearn</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Java Intermediate - Sololearn</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Introduction to C# - Sololearn</span>
+                    <span class="tag is-white" style="border: 1px solid var(--border-color);">Comunicação e Escrita Científica - ACS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+        <div class="container has-text-centered">
+            <h2 class="title section-title mb-4">Vamos nos Conectar</h2>
+            <p class="subtitle is-5" style="color: var(--text-muted);">Tem uma ideia, pesquisa ou projeto em mente? Me mande um e-mail.</p>
+            <p class="title is-3 mt-5" style="color: var(--os-blue); font-weight: 600;">guilherme.faura@gmail.com</p>
+            
+            <div class="buttons is-centered mt-6">
+                <a href="https://www.linkedin.com/in/guilhermefaura" target="_blank" class="button is-light-os is-large">
+                    <span class="icon"><i class="fab fa-linkedin" style="color: #0a66c2;"></i></span>
+                </a>
+                <a href="https://github.com/GuilhermeIsNotUnix" target="_blank" class="button is-light-os is-large">
+                    <span class="icon"><i class="fab fa-github" style="color: #24292e;"></i></span>
+                </a>
+                <a href="mailto:guilherme.faura@gmail.com" class="button is-light-os is-large">
+                    <span class="icon"><i class="fa-solid fa-envelope" style="color: var(--text-dark);"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container has-text-centered">
+            <div class="footer-math mb-6">
                 <p>\[\text{And God said...}\]</p>
                 <p>\[\overrightarrow{\nabla} \cdot \overrightarrow{D} = \rho\]</p>
                 <p>\[\overrightarrow{\nabla} \cdot \overrightarrow{B} = 0\]</p>
@@ -245,11 +539,36 @@
                 <p>\[\overrightarrow{\nabla} \times \overrightarrow{H} = \frac{\partial \overrightarrow{D}}{\partial t} + \overrightarrow{J}\]</p>
                 <p>\[\text{and there was light...}\]</p>
             </div>
+            
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                &copy; 2026 Guilherme Faura. Desenvolvido com <a href="https://bulma.io/" target="_blank" style="color: var(--os-blue); font-weight: 500;">Bulma CSS</a>.
+            </p>
         </div>
+    </footer>
 
-        <!-- Compiled and minified JavaScript -->
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <!-- Collapsible -->
-        <script src="js/collapsible.js"></script>
-    </body>
+    <!-- Script para o Navbar Mobile do Bulma -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                        
+                        if($target.classList.contains('is-active')) {
+                            $target.style.backgroundColor = "var(--bg-white)";
+                            $target.style.boxShadow = "0 4px 10px rgba(0,0,0,0.05)";
+                        } else {
+                            $target.style.backgroundColor = "transparent";
+                            $target.style.boxShadow = "none";
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </html>
