@@ -181,9 +181,24 @@
             transform: scale(1.1);
         }
     </style>
-</head>
-<body>
 
+    <script>
+    // Verifica se o usuário já forçou uma escolha de idioma antes
+    const savedLang = localStorage.getItem('site_lang');
+    
+    // Captura os 2 primeiros caracteres do idioma do navegador (ex: 'pt', 'en', 'es')
+    const browserLang = navigator.language.slice(0, 2).toLowerCase();
+
+    // Redireciona para inglês se:
+    // 1. O usuário escolheu inglês manualmente no passado.
+    // 2. Não há escolha salva E o navegador for diferente de 'pt'.
+    if (savedLang === 'en' || (!savedLang && browserLang !== 'pt')) {
+        window.location.replace('./en/');
+    }
+    </script>
+</head>
+
+<body>
     <!-- NAVBAR -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
@@ -287,7 +302,7 @@
                             <h3 class="is-size-4 has-text-weight-bold mb-1">Administrador de Cluster HPC</h3>
                             <p class="is-size-6 mb-4 mt-2" style="color: var(--os-blue); font-weight: 500;">FCT-UNESP (lsncs)</p>
                             <p style="color: var(--text-muted);">
-                                Durante 2 anos, fui técnico bolsista responsável pela manutenção e otimização do cluster computacional de alto desempenho (HPC) da FCT-UNESP. Atuei inteiramente em ambiente <strong>Linux Ubuntu Server</strong>, dando suporte aos usuarios para pesquisas e monitorando/garantindo a fila de atividade via Bash.
+                                Durante 2 anos, fui técnico bolsista PROPe responsável pela manutenção e otimização do cluster computacional de alto desempenho (HPC) da FCT-UNESP. Atuei inteiramente em ambiente <strong>Linux Ubuntu Server</strong>, dando suporte aos usuarios para pesquisas e monitorando/garantindo a fila de atividade via Bash.
                             </p>
                             <div class="tags mt-4">
                                 <span class="tag is-light-blue">Linux</span>
@@ -326,7 +341,7 @@
             <div class="has-text-centered">
                 <h2 class="title section-title">Habilidades Técnicas</h2>
                 <p class="subtitle is-6" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
-                    Utilizo diariamente o ecossistema Linux (elementaryOS, Ubuntu, Fedora) para maximizar a produtividade no desenvolvimento e na análise de dados.
+                    Utilizo diariamente o ecossistema Linux (Fedora, Ubuntu, elementaryOS) para maximizar a produtividade no desenvolvimento e na análise de dados.
                 </p>
             </div>
             <div class="columns is-multiline is-centered mt-6 has-text-centered">
@@ -436,7 +451,7 @@
                                 <p class="title is-4 mb-0">Gaman</p>
                             </div>
                             <p class="subtitle is-6 mt-1" style="color: var(--text-muted);">Python</p>
-                            <p class="mb-4" style="color: var(--text-muted);">Aplicação open-source para treinamento e memorização de Hiragana e Katakana usando repetição visual.</p>
+                            <p class="mb-4" style="color: var(--text-muted);">Aplicação open-source para treinamento e memorização de Hiragana e Katakana japonês usando repetição visual.</p>
                             <div class="tags">
                                 <span class="tag is-light">Python</span>
                                 <span class="tag is-light">Educação</span>
@@ -511,7 +526,7 @@
     <section id="contato" class="section">
         <div class="container has-text-centered">
             <h2 class="title section-title mb-4">Vamos nos Conectar</h2>
-            <p class="subtitle is-5" style="color: var(--text-muted);">Tem uma ideia, pesquisa ou projeto em mente? Me mande um e-mail.</p>
+            <p class="subtitle is-5" style="color: var(--text-muted);">Tem uma proposta, pesquisa ou projeto em mente? Me mande um e-mail.</p>
             <p class="title is-3 mt-5" style="color: var(--os-blue); font-weight: 600;">guilherme.faura@gmail.com</p>
             
             <div class="buttons is-centered mt-6">
